@@ -6,6 +6,7 @@ from .models import city
 from django.views.generic.edit import DeleteView
 from django.urls import reverse_lazy
 from decouple import config
+from django.conf import settings
 
 
 def index(request):
@@ -29,7 +30,9 @@ def index(request):
 
     """
 
-    new_city, url, token_key = None, '', config('TOKEN_KEY', '')
+    new_city, url,= None, '', 
+    token_key = settings.OPENWEATHER_API_KEY
+    
     err_msg, message, message_class = '', '', ''
     if request.method == 'POST':
         form = CityForm(request.POST)
