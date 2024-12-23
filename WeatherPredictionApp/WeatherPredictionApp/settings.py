@@ -11,8 +11,12 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
 from pathlib import Path
-from decouple import config
 import os
+from decouple import config
+
+OPENWEATHER_API_KEY = config('OPENWEATHER_API_KEY', default=None)
+if not OPENWEATHER_API_KEY:
+    raise ValueError("Missing OPENWEATHER_API_KEY in .env file")
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -124,6 +128,5 @@ STATIC_URL = 'static/'
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
-OPENWEATHER_API_KEY = '1a1626669515b6cfc7de8f0db5ffbc60'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'

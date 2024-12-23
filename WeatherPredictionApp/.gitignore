@@ -1,0 +1,41 @@
+# Python
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+*.db
+
+# Environment Variables
+.env
+
+# Django
+*.log
+db.sqlite3
+media/
+staticfiles/
+local_settings.py
+
+# Virtual Environment
+venv/
+env/
+*.egg
+*.egg-info/
+pip-log.txt
+pip-delete-this-directory.txt
+
+# IDEs and Editors
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Node (if using frontend build tools)
+node_modules/
+
+# Migrations (optional)
+# */migrations/*.py
+# */migrations/*.pyc
