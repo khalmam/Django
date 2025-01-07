@@ -10,7 +10,7 @@ Quiz App
         {% for category in categories %}
         <form action="" class=" ">
             <div class="card box_shadow" style="width: 18rem;">
-                <img src="{{category.image.url}}" class="card-img-top card_image" alt="...">
+                <img src="{{category.media.url}}" class="card-img-top card_image" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">{{category.name|title}}</h5>
                     <p class="card-text">{{category.description|truncatechars:"50"}}</p>
